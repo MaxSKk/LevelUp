@@ -1,5 +1,6 @@
 @import url(./nullstyle.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url(./slick.css);
 
 body {
    font-family: 'Roboto', sans-serif;
@@ -275,5 +276,137 @@ body {
 
    .compound__image {
       width: 20px;
+   }
+}
+
+/*==REVIEWS==*/
+
+.reviews {
+   background: rgb(132, 0, 136);
+   background: linear-gradient(270deg, rgba(132, 0, 136, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 1) 100%);
+   padding: 50px 0px;
+}
+
+.reviews__slider {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.reviews__slide-body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   color: #fff;
+   padding: 15px;
+}
+
+.reviews__image {
+   height: 350px;
+   margin-bottom: 25px;
+}
+
+.reviews__image img {
+   max-height: 100%;
+}
+
+.reviews__name {
+   font-size: 30px;
+   font-weight: 500;
+   margin-bottom: 30px;
+}
+
+.reviews__text {
+   max-width: 350px;
+}
+
+.slick-prev,
+.slick-next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 30px;
+   height: 30px;
+   z-index: 1;
+   font-size: 0;
+   background-color: #ffd000;
+   transition: background-color .2s ease-out;
+}
+
+.slick-next {
+   right: 0;
+}
+
+.slick-prev {
+   left: 0;
+}
+
+.slick-next::after,
+.slick-next::before,
+.slick-prev::after,
+.slick-prev::before {
+   content: '';
+   position: absolute;
+   height: 3px;
+   width: 16px;
+   background-color: #ae00ff;
+   border-radius: 20px;
+   transition: background-color .2s ease-out;
+}
+
+.slick-prev::before {
+   top: 9px;
+   left: 6px;
+   transform: rotate(-40deg);
+}
+
+.slick-prev::after {
+   top: 18px;
+   left: 6px;
+   transform: rotate(40deg);
+}
+
+.slick-next::before {
+   top: 9px;
+   left: 6px;
+   transform: rotate(40deg);
+}
+
+.slick-next::after {
+   top: 18px;
+   left: 6px;
+   transform: rotate(-40deg);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+   background-color: #ffae00;
+}
+
+.slick-next:hover::after,
+.slick-next:hover::before,
+.slick-prev:hover::after,
+.slick-prev:hover::before {
+   background-color: #970000;
+}
+
+@media(max-width: 550px) {
+   .reviews {
+      padding: 30px 0px;
+   }
+
+   .reviews__image {
+      height: 200px;
+      margin-bottom: 15px;
+   }
+
+   .reviews__name {
+      font-size: 22px;
+      margin-bottom: 20px;
+   }
+
+   .reviews__text {
+      max-width: 300px;
    }
 }
