@@ -32,7 +32,7 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                      </li>
                   </ul>
-                  <a class="button promo__button" href="">Order</a>
+                  <a class="button promo__button" href="#order">Order</a>
                </div>
             </div>
          </div>
@@ -93,7 +93,7 @@
                </div>
             </div>
             <div class="compound__bottom">
-               <a class="button compound__button" href="">Order</a>
+               <a class="button compound__button" href="#order">Order</a>
             </div>
          </div>
       </div>
@@ -178,7 +178,46 @@
                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   </li>
                </ul>
-               <a class="button info__button" href="">Order</a>
+               <a class="button info__button" href="#order">Order</a>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="order" id="order">
+      <div class="container">
+         <div class="order__inner">
+            <div class="order__header">
+               <h2 class="order__title">LevelUp</h2>
+               <div class="order__timer" id="timer"></div>
+            </div>
+            <div class="order__body">
+               <div class="order__column">
+                  <div class="order__offer">
+                     <div class="order__price">
+                        <p class="order__old-cost">650$</p>
+                        <p class="order__new-cost">500$</p>
+                     </div>
+                     <form class="order__form">
+                        <fieldset>
+                           <label class="order__label">
+                              <input type="text" placeholder="Name" required>
+                              <span>Jhon</span>
+                           </label>
+                           <label class="order__label">
+                              <input type="tel" inputmode="tel" pattern=[0-9]* placeholder="Tel" required>
+                              <span>89990009900</span>
+                           </label>
+                        </fieldset>
+                        <button class="button order__button" type="submit">Order</button>
+                     </form>
+                  </div>
+               </div>
+               <div class="order__column order__column-right">
+                  <div class="order__image">
+                     <img src="./img/png-jpg/prod.png" alt="prod">
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -186,6 +225,7 @@
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script src="./js/slick.min.js"></script>
+   <script src="./js/jquery.countdown.js"></script>
    <script src="./js/script.js"></script>
 </body>
 
